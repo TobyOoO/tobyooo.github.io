@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="dist/toby.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/paper.js/0.11.4/paper-full.min.js"></script>
+    <script type="text/paperscript" src="dist/metroflow.js" canvas="paperCanvas"></script>
+    <script defer type="text/javascript">
+var tbstations = {
+    terminals: [
+    {
+        tid: "BL07",
+        name: "Toby Subway Line",
+    },{
+        tid: "R03",
+        name: "NLP and ML",
+    },{
+        tid: "Y01",
+        name: "Text Mining",
+    },{
+        tid: "BR01",
+        name: "Web Dev",
+    },{
+        tid: "O01",
+        name: "Economics",
+    },{
+        tid: "A4",
+        name: "Gender Study",
+    },
+    {
+        tid: "G01",
+        name: "Emotion Analysis",
+    }],
+    intersections: [
+        ["Y20", "A3"],
+        ["O15", "A2"],
+        ["O12"],
+        ["O11", "R13"],
+        ["R11", "G14"],
+        ["G08", "A1"],
+        ["G07", "BL11"],
+        ["Y16", "BL09"],
+        ["Y15", "BL08"],
+        ["Y11", "O02"],
+        ["G04", "O05"],
+        ["G05", "R08"],
+        ["R07", "O06"],
+        ["O07", "BL14"],
+        ["G15", "O08"],
+        ["G16", "BR11"],
+        ["BL15", "BR10"],
+        ["R06", "BR09"],
+        ["BL18", "BR24"],
+        ["Y01", "BR01"],
+        ["R10", "BL12"],
+        ["O17", "Y18"],
+    ],
+    spots: [
+    {
+        tid: ["G14", "R11", "R10", "BL12"],
+        name: "Textual\nEmotion\nRecognition",
+    },{
+        tid: ["G05", "R08"],
+        name: "Emotion Analysis\non E-Commerce",
+    },{
+        tid: ["BL15", "BR10"],
+        name: "Web App Dev",
+    },{
+        tid: ["O06", "R07"],
+        name: "Project\nEstimation\nPlatform",
+    },{
+        tid: ["R06", "BR09"],
+        name: "MLOps and\nDesign Pattern",
+    },{
+        tid: ["BL17"],
+        name: "IT Career\nin Japan",
+    },{
+        tid: ["Y11", "O02"],
+        name: "Text Mining\nfor CPI",
+    },{
+        tid: ["G08", "A1"],
+        name: "Gender Bias\nin Deep Learning",
+    },{
+        tid: ["A2", "O15"],
+        name: "Gender Statistics",
+    },{
+        tid: ["R04"],
+        name: "Predictive\nFire Map",
+    },{
+        tid: ["R13", "O11"],
+        name: "Social\nCredit Wallet\non Blockchain",
+    },{
+        tid: ["Y19"],
+        name: "Hotline\nInteligent\nAssistant",
+    },{
+        tid: ["BL18", "BR24"],
+        name: "Open Source\nCommunity",
+    },{
+        tid: ["A3", "Y20"],
+        name: "Diversity of Autobio\nin Dating BBS",
+    },],
+};
+
+$(function(){
+    paper.PaperScript.load();
+    var MetroFlow = window.paper.MetroFlow;
+    console.log(MetroFlow);
+
+    function loadMap(newMap){
+        MetroFlow.util.DisplaySettings.isDebug = false;
+
+        drawSettingsFull = MetroFlow.map.createDrawSettings();
+        drawSettingsFull.text = true;
+        drawSettingsFull.fast = false;
+        drawSettingsFull.calcTextPositions = true;
+        drawSettingsFull.minorStationText = false;
+
+        map = window.map;
+        map = newMap;
+        map.sta = getStationName(map.stations());
+        overrideStationStyles(map.sta);
+        map.draw(drawSettingsFull);
+        // MetroFlow.zoom.enableZoomOnCanvas(map);
+        paper.view.scale(0.9);
+        paper.view.translate({x: 20, y:-20});
+        paper.view.scaled = false;
+        paper.view.centered = false;
+
+        setInterval(swapSpots, 10000);
+        
+    }
+    var lastSpot = 0;
+    function swapSpots(){
+
+        function getRandomInt(max) {
+          return Math.floor(Math.random() * Math.floor(max));
+        }
+        x = getRandomInt(tbstations.spots.length);
+        while(lastSpot==x){
+            x=getRandomInt(tbstations.spots.length);
+        }
+        spot = tbstations.spots[x];
+        spot.station.scaleView();
+        lastSpot = x;
+    }
+
+    function overrideStationStyles(sta){
+
+        // all stations
+        for(const tid in sta){
+            station = sta[tid];
+            lineColor = station.style.strokeColor;
+            station.style = {strokeColor: lineColor, strokeWidth: 5, fillColor: lineColor, stationRadius: 5, selectionColor: "#006400", fullySelected: false };
+            
+            // station.style.fillColor.alpha = 0.7;
+            station.tid = tid;
+            station.name = "";
+        }
+
+        // terminals
+        for(i=0; i<tbstations.terminals.length; i++){
+            terminal = tbstations.terminals[i];
+            tid = terminal.tid;
+            station = sta[tid];
+            lineColor = station.style.strokeColor;
+            station.style = {strokeColor: lineColor, strokeWidth: 8, fillColor: lineColor, stationRadius: 10, selectionColor: "#006400", fullySelected: false };
+            station.textStyle = {fontFamily: 'Ubuntu', fontWeight: 700, fontSize: 20};
+            station.name = terminal.name;
+        }
+
+        // intersections
+        // for(i=0; i<tbstations.intersections.length; i++){
+        //     for(j=0; j<tbstations.intersections[i].length; j++){
+        //         tid = tbstations.intersections[i][j];
+        //         // console.log('tid', tid);
+        //         station = sta[tid];
+        //         station.style.strokeWidth = 4;
+        //         station.style.fillColor = 'white';
+        //         if(station.style.stationRadius == 5){
+        //             station.style.stationRadius = 8;
+        //         }
+        //     }
+        // }
+
+        // spots
+        for(i=0; i<tbstations.spots.length; i++){
+            spot = tbstations.spots[i];
+            tid = spot.tid[0];
+            station = sta[tid];
+            console.log('tid', tid);
+            station.name = spot.name;
+            spot.station = station;
+            for(j=0; j<spot.tid.length; j++){
+                tid = spot.tid[j];
+                station = sta[tid];
+                station.style.strokeWidth = 4;
+                station.style.fillColor = 'white';
+                if(station.style.stationRadius == 5){
+                    station.style.stationRadius = 8;
+                }
+                station.textStyle = {fontFamily: 'Ubuntu', fontWeight: 500, fontSize: 16, fillColor: 'grey'};
+            }
+            
+        }
+    }
+
+    function getStationName(stations){
+        name2station = {};
+        for(i=0; i<stations.length; i++){
+            station = stations[i];
+            if(station["name"]){
+                station.scaleView = function(){
+                    var position = this.position;
+                    var station = this;
+                    view = paper.view;
+                    if(view.scaled){
+                        view.toScaleOut = true;
+                        view.scaled = false;
+                    }
+
+                    paper.view.onFrame = function(event) {
+                        view = paper.view;
+                        
+                        if(view.toScaleOut){
+                            if(view.scaling._x <= 1.5){
+                                view.scaled=false;
+                                view.toScaleOut=false;
+                            }else{
+                                view.scale(0.98);
+                            }
+                        }else{
+                            if(view.scaling._x >= 2.5){
+                                view.scaled=true;
+                            }else{
+                                view.scale(1.02, position);
+                            }
+                        }
+
+                        dx=0; dy=0;
+                        a=1.5; p=1;
+                        ox=view.center._x*0.9;
+                        oy=view.center._y;
+                        if(ox< position.x-p){
+                            dx = -a;
+                        }else if(ox > position.x+p){
+                            dx = a;
+                        }
+                        if(oy < position.y-p){
+                            dy = -a;
+                        }else if(oy > position.y+p){
+                            dy = a;
+                        }
+                        if(dx!=0 || dy!=0){
+                            view.centered = false;
+                            view.translate({x:dx, y:dy});
+                        }else{
+                            view.centered = true;
+                        }
+
+                        if(view.scaled && view.centered){
+                            view.onFrame = undefined;
+                        }
+                    };
+                };
+                name2station[station["name"]] = station;
+            }
+        }
+        return name2station;
+    }
+
+    var that = this;
+    $.getJSON("json/route.json", function(json) {
+        newMap = MetroFlow.serialize.loadMap(json);
+        loadMap(newMap);
+    });
+});
+    </script>
+</head>
+
+<body>
+    <div id="overlay-content">
+        <div class="row">
+            <div class="col s9 offset-s3 m5 offset-m7 l4 offset-l8 info">
+                <div class="s12">
+                    <img src="img/profile.jpg" class="profile-pic"/>
+                    <h2 class="center">Bello!<br/>I'm <mark>Toby Liu.</mark></h2>
+                    <div class="hashtags row">
+                        <mark>NLP</mark>
+                        <mark>AI/ML</mark>
+                        <mark>Emotion Analysis</mark>
+                        <mark>Gender Study</mark>
+                        <mark>OSS</mark>
+                        <mark>NGO</mark>
+                        <mark>Economics</mark>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="s12 links">
+                        <a href="https://www.linkedin.com/in/toby-liu-826a0430/" target="_blank"><img alt="linkedin" src="img/linkedin.png" /></a>
+                        <a href="https://scholar.google.com/citations?user=UpeKuDAAAAAJ" target="_blank"><img alt="scholar" src="img/scholar.png" /></a>
+                        <a href="https://github.com/TobyOoO/" target="_blank"><img alt="github" src="img/github.png" /></a>
+                        <a onclick="M.toast({html: 'toby <i class=\'material-icons\'>alternate_email</i> toby.taipei '})"><img alt="mail" src="img/mail.png" /></a>
+                        <a href="http://blog.toby.taipei" target="_blank"><img alt="blogger" src="img/blogger.png" /></a>
+                        <a href="https://www.facebook.com/Toby0o0" target="_blank"><img alt="facebook" src="img/facebook.png" /></a>
+                        <a href="https://twitter.com/tobyminion" target="_blank"><img alt="twitter" src="img/twitter.png" /></a>
+                        <a href="https://speakerdeck.com/tobyooo" target="_blank"><img alt="talk" src="img/talk.png" /></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="overlay"></div>
+    <canvas id="paperCanvas" resize></canvas>
+
+
+</body>
+
+</html>
