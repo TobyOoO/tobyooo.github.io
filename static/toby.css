@@ -84,7 +84,7 @@ canvas[resize] {
     margin: 2.5px 0;
 }
 
-a:hover{
+#overlay-content a:hover{
     background-color: #4DC9FF !important;
     border-radius: 10px;
     transition: .3s;

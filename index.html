@@ -316,7 +316,7 @@ $(function(){
         loadMap(newMap);
     });
 
-    $('.tabs').tabs();
+    M.AutoInit();
 });
     </script>
 </head>
@@ -332,8 +332,8 @@ $(function(){
                         <a href="https://post.oby.tw" target="_blank"><mark>Writing</mark></a>
                     </div>
                     <div class="hashtags row">
-                        <a href="#t-nlp"><mark>NLP</mark></a>
-                        <a href="#t-aiml"><mark>AI/ML</mark></a>
+                        <a href="#t-nlp" class="modal-trigger"><mark>NLP</mark></a>
+                        <a href="#t-aiml" class="modal-trigger"><mark>AI/ML</mark></a>
                         <mark>Emotion Analysis</mark>
                         <mark>Gender Study</mark>
                         <mark>OSS</mark>
@@ -359,6 +359,40 @@ $(function(){
     <div id="overlay"></div>
     <canvas id="paperCanvas" resize></canvas>
 
+    <!-- Modals-->
+    <div id="t-nlp" class="modal modal-fixed-footer">
+        <div class="modal-content">
+            <h4>Line NLP</h4>
+            <p>Toby is engaged with NLP and has some research in the field.</p>
+            <p>Some of Toby's work in NLP include</p>
+            <ul class="collection">
+                <li class="collection-item">Textual Emotion Recognition</li>
+                <li class="collection-item">Kanjo Dojo- Emotion Analysis in a C2C marketplace</li>
+                <li class="collection-item">Text Mining on Representativeness of Consumption Items for CPI estimate (with Ministry of Economy of Taiwan)</li>
+                <li class="collection-item">Digital Muggle in Gender: How Deep Learning Model Learns Gender Difference in Emotion Expression</li>
+            </ul>
+        </div>
+        <div class="modal-footer">
+            <a href="#!" class="modal-close waves-effect waves-yellow btn-flat">Bello!</a>
+        </div>
+    </div>
+
+    <div id="t-aiml" class="modal modal-fixed-footer">
+        <div class="modal-content">
+            <h4>Line AIML</h4>
+            <p>Toby is an experienced ML engineer.</p>
+            <p>Some of Toby's work in AIML include</p>
+            <ul class="collection">
+                <li class="collection-item">Textual Emotion Recognition</li>
+                <li class="collection-item">MLOps and Chatbot</li>
+                <li class="collection-item">Predictive Risk Map of Fire Hazards in Kaohsiung 2.0 at D4SG (Kaohsiung, 2017)</li>
+                <li class="collection-item">iCredible - Social Credit Wallet at 2017 ESUN FinTech Hackathon (Taipei, 2017) (Gold Medalist)</li>
+            </ul>
+        </div>
+        <div class="modal-footer">
+            <a href="#!" class="modal-close waves-effect waves-yellow btn-flat">Bello!</a>
+        </div>
+    </div>
 
 </body>
 
