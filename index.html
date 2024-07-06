@@ -315,6 +315,8 @@ $(function(){
         newMap = MetroFlow.serialize.loadMap(json);
         loadMap(newMap);
     });
+
+    $('.tabs').tabs();
 });
     </script>
 </head>
@@ -327,8 +329,11 @@ $(function(){
                     <img src="img/profile.jpg" class="profile-pic"/>
                     <h2 class="center">Bello!<br/>I'm <mark>Toby Liu.</mark></h2>
                     <div class="hashtags row">
-                        <mark>NLP</mark>
-                        <mark>AI/ML</mark>
+                        <a href="https://post.oby.tw" target="_blank"><mark>Writing</mark></a>
+                    </div>
+                    <div class="hashtags row">
+                        <a href="#t-nlp"><mark>NLP</mark></a>
+                        <a href="#t-aiml"><mark>AI/ML</mark></a>
                         <mark>Emotion Analysis</mark>
                         <mark>Gender Study</mark>
                         <mark>OSS</mark>
@@ -336,13 +341,13 @@ $(function(){
                         <mark>Economics</mark>
                     </div>
                 </div>
-                <div class="row">
+                <div class="row footer">
                     <div class="s12 links">
                         <a href="https://www.linkedin.com/in/toby-liu-826a0430/" target="_blank"><img alt="linkedin" src="img/linkedin.png" /></a>
                         <a href="https://scholar.google.com/citations?user=UpeKuDAAAAAJ" target="_blank"><img alt="scholar" src="img/scholar.png" /></a>
                         <a href="https://github.com/TobyOoO/" target="_blank"><img alt="github" src="img/github.png" /></a>
-                        <a onclick="M.toast({html: 'toby <i class=\'material-icons\'>alternate_email</i> toby.taipei '})"><img alt="mail" src="img/mail.png" /></a>
-                        <a href="http://blog.toby.taipei" target="_blank"><img alt="blogger" src="img/blogger.png" /></a>
+                        <a onclick="M.toast({html: 't <i class=\'material-icons\'>alternate_email</i> oby.tw '})"><img alt="mail" src="img/mail.png" /></a>
+                        <a href="http://post.oby.tw" target="_blank"><img alt="blogger" src="img/blogger.png" /></a>
                         <a href="https://www.facebook.com/Toby0o0" target="_blank"><img alt="facebook" src="img/facebook.png" /></a>
                         <a href="https://twitter.com/tobyminion" target="_blank"><img alt="twitter" src="img/twitter.png" /></a>
                         <a href="https://speakerdeck.com/tobyooo" target="_blank"><img alt="talk" src="img/talk.png" /></a>
