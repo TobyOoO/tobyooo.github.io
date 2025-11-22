@@ -202,7 +202,6 @@
          "spacing":0,
          "tilecount":391,
          "tileheight":32,
-         "tiles":[
                 {
                  "id":5,
                  "type":"room-border"
