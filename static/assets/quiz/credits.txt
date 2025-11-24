@@ -1,3 +1,5 @@
+Map of Addis Ababa-Djibouti Railway. Standard Gauge Railway to open in 2016 shown in red. Small green line for the disfunctional meter gauge railway.
+https://commons.wikimedia.org/wiki/File:Bahnstrecke_Addis_Abeba%E2%80%93Dschibuti.png
 Author 	
 
     rendering with Maperitive, text and integration: Pechristener
@@ -6,3 +8,4 @@ Author
 
 Permission
 (Reusing this file) 	Map data (c) OpenStreetMap (and) contributors, CC-BY-SA
+---
