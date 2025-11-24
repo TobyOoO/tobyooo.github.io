@@ -1,0 +1,8 @@
+Author 	
+
+    rendering with Maperitive, text and integration: Pechristener
+    Ethiopia location map.svg: NordNordWest
+    Ethiopia on the globe (Africa centered).svg: TUBS
+
+Permission
+(Reusing this file) 	Map data (c) OpenStreetMap (and) contributors, CC-BY-SA
