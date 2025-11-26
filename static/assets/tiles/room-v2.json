@@ -216,7 +216,7 @@
          "name":"interactives",
          "objects":[
                 {
-                 "height":96,
+                 "height":64,
                  "id":16,
                  "name":"vending-machine",
                  "rotation":0,
@@ -227,7 +227,7 @@
                  "y":96
                 }, 
                 {
-                 "height":96,
+                 "height":64,
                  "id":17,
                  "name":"book-shelf",
                  "rotation":0,
@@ -238,7 +238,7 @@
                  "y":96
                 }, 
                 {
-                 "height":96,
+                 "height":64,
                  "id":18,
                  "name":"computer",
                  "rotation":0,
@@ -255,12 +255,12 @@
                  "rotation":0,
                  "type":"",
                  "visible":true,
-                 "width":64,
-                 "x":288,
+                 "width":32,
+                 "x":320,
                  "y":128
                 }, 
                 {
-                 "height":96,
+                 "height":64,
                  "id":20,
                  "name":"desk",
                  "rotation":0,
@@ -271,7 +271,7 @@
                  "y":224
                 }, 
                 {
-                 "height":64,
+                 "height":32,
                  "id":21,
                  "name":"exit",
                  "rotation":0,
@@ -279,7 +279,7 @@
                  "visible":true,
                  "width":64,
                  "x":160,
-                 "y":384
+                 "y":416
                 }],
          "opacity":1,
          "type":"objectgroup",
