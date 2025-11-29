@@ -1,7 +1,0 @@
-
-export enum GameState {
-  LOADING = 'LOADING',
-  INSTRUCTION = 'INSTRUCTION',
-  PLAYING = 'PLAYING',
-  RESULT = 'RESULT'
-}
