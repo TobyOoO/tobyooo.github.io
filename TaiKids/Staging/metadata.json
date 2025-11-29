@@ -1,0 +1,5 @@
+{
+  "name": "Pixel Room",
+  "description": "A 2D pixel-art virtual room explorer using Phaser.js. Navigate your personalized space with tap or keyboard controls.",
+  "requestFramePermissions": []
+}
