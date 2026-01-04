@@ -270,7 +270,7 @@
                 {
                  "height":32,
                  "id":18,
-                 "name":"poster-1",
+                 "name":"poster",
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -297,7 +297,7 @@
                  "type":"",
                  "visible":true,
                  "width":32,
-                 "x":128,
+                 "x":96,
                  "y":224
                 }, 
                 {
@@ -319,7 +319,7 @@
                  "type":"",
                  "visible":true,
                  "width":32,
-                 "x":128,
+                 "x":224,
                  "y":288
                 }, 
                 {
