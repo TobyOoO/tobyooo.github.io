@@ -22,8 +22,43 @@
     <link rel="manifest" href="https://t.oby.tw/static/assets/icon/site.webmanifest">
     <style>
       /* nes btn override */
+      .nes-btn{
+        position: unset;
+      }
       .nes-btn.flex{
-          display: flex !important;
+        display: flex !important;
+      }
+      /* Mobile Touch Optimizations */
+      button, .nes-btn, .nes-container, a, input, [role="button"] {
+        touch-action: manipulation; /* Disables double-tap to zoom */
+        -webkit-tap-highlight-color: transparent;
+        pointer-events: auto; /* Force capture events even if parent is pointer-events-none */
+      }
+      /* Mobile nes border fix */
+      .nes-btn {
+        border-width: 4px;
+        border-style: solid;
+        border-image-slice: 2;
+        border-image-repeat: stretch;
+        border-image-source: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="5" height="5"><rect x="2" y="1" width="1" height="1" fill="rgb(33,37,41)"/><rect x="1" y="2" width="1" height="1" fill="rgb(33,37,41)"/><rect x="3" y="2" width="1" height="1" fill="rgb(33,37,41)"/><rect x="2" y="3" width="1" height="1" fill="rgb(33,37,41)"/></svg>');
+        image-rendering: pixelated;
+        image-rendering: crisp-edges;
+      }
+
+      .nes-input {
+        border-image-source: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="5" height="5"><rect x="2" y="1" width="1" height="1" fill="rgb(33,37,41)"/><rect x="1" y="2" width="1" height="1" fill="rgb(33,37,41)"/><rect x="3" y="2" width="1" height="1" fill="rgb(33,37,41)"/><rect x="2" y="3" width="1" height="1" fill="rgb(33,37,41)"/></svg>');
+        image-rendering: pixelated;
+        image-rendering: crisp-edges;
+        border-image-repeat: stretch;
+        border-style: solid;
+      }
+
+      .nes-table.is-bordered {
+        border-image-source: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="5" height="5"><rect x="2" y="1" width="1" height="1" fill="rgb(33,37,41)"/><rect x="1" y="2" width="1" height="1" fill="rgb(33,37,41)"/><rect x="3" y="2" width="1" height="1" fill="rgb(33,37,41)"/><rect x="2" y="3" width="1" height="1" fill="rgb(33,37,41)"/></svg>');
+        image-rendering: pixelated;
+        image-rendering: crisp-edges;
+        border-image-repeat: stretch;
+        border-style: solid;
       }
       /* nes p margin override */
       .flex p{
@@ -101,8 +136,8 @@
   }
 }
 </script>
-  <script type="module" crossorigin src="/TaiKids/assets/main-84mImeO-.js"></script>
-  <link rel="stylesheet" crossorigin href="/TaiKids/assets/index-8PJjlWcH.css">
+  <script type="module" crossorigin src="/TaiKids/assets/main-CTgfprjh.js"></script>
+  <link rel="stylesheet" crossorigin href="/TaiKids/assets/index-DZd8hCxs.css">
 </head>
   <body>
     <div id="root"></div>
