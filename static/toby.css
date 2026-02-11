@@ -105,6 +105,7 @@ canvas[resize] {
 
 .hashtags mark{
     background-color:#4DC9FF !important;
+    white-space: nowrap;
 }
 
 .punchline{
