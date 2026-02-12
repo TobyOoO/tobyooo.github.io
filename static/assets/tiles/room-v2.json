@@ -297,7 +297,7 @@
                  "y":224
                 }, 
                 {
-                 "height":64,
+                 "height":32,
                  "id":21,
                  "name":"exit",
                  "rotation":0,
