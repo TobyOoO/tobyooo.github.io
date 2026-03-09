@@ -1,168 +1,258 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8" />
-    <meta name="description" content="作家偷筆《台孩危機》小說，2026 年三月中旬問世！">
-    <meta name="keywords" content="台孩兒養成器,台孩危機,作家,偷筆,小說,文學,華文創作,網頁遊戲,養成遊戲,Web Game,WEB RPG,Simulation Game">
-    <meta name="author" content="台孩製作委員會">
-    <meta property="og:title" content="偷筆作品・《台孩危機》" />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://t.oby.tw/TaiKids/landing.html" />
-    <meta property="og:image" content="https://t.oby.tw/static/assets/game-logo.png" />
-    <title>偷筆作品・《台孩危機》</title>
-    <script defer src="https://hondashi.vercel.app/script.js" data-website-id="79ae684f-f897-43a2-a6c8-eed529d6f80c"></script>
-    <link href="https://unpkg.com/nes.css@2.3.0/css/nes.min.css" rel="stylesheet" />
-    <link href="https://cdn.jsdelivr.net/npm/cn-fontsource-xiaolai-mono-sc-regular@1.0.3/font.min.css" rel="stylesheet">
-    <link rel="preload" as="font" href="https://cdn.jsdelivr.net/gh/max32002/naikaifont@1.0/webfont/NaikaiFont-Regular-Lite.woff2" type="font/woff2" crossorigin>
-    <link rel="preload" as="font" href="https://t.oby.tw/static/assets/font/Cubic_11.woff2" type="font/woff2" crossorigin>
-    <link rel="apple-touch-icon" sizes="180x180" href="https://t.oby.tw/static/assets/icon/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="https://t.oby.tw/static/assets/icon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="https://t.oby.tw/static/assets/icon/favicon-16x16.png">
-    <link rel="manifest" href="https://t.oby.tw/static/assets/icon/site.webmanifest">
-    <style>
-      /* nes btn override */
-      .nes-btn.flex{
-          display: flex !important;
-      }
-      /* nes p margin override */
-      .flex p{
-        margin-bottom: unset;
-      }
-      /* Xiaolai/Naikai Font Import */
-      @font-face {
-        font-family: 'NaikaiFont';
-        src: url('https://cdn.jsdelivr.net/gh/max32002/naikaifont@1.0/webfont/NaikaiFont-Regular-Lite.woff2') format('woff2');
-        font-weight: normal;
-        font-style: normal;
-        font-display: swap;
-      }
-      /* Cubic */
-      @font-face {
-        font-family: 'Cubic';
-        src: url('https://t.oby.tw/static/assets/font/Cubic_11.woff2') format('woff2');
-        font-weight: normal;
-        font-style: normal;
-        font-display: swap;
-      }
 
-      /* Scoped Font Classes instead of global body styles */
-      .pixel-font {
-        font-family: 'Cubic', sans-serif;
-      }
-      
-      .handwriting-font {
-        font-family: 'NaikaiFont', 'Xiaolai Mono SC', cursive;
-      }
+<head>
+  <meta charset="utf-8" />
+  <meta name="description" content="作家偷筆《台孩危機》小說，2026 年三月中旬問世！">
+  <meta name="keywords" content="台孩兒養成器,台孩危機,作家,偷筆,小說,文學,華文創作,網頁遊戲,養成遊戲,Web Game,WEB RPG,Simulation Game">
+  <meta name="author" content="台孩製作委員會">
+  <meta property="og:title" content="偷筆作品・《台孩危機》" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://t.oby.tw/TaiKids/landing.html" />
+  <meta property="og:image" content="https://t.oby.tw/static/assets/台孩危機-cover.jpg" />
+  <title>偷筆作品・《台孩危機》</title>
+  <script defer src="https://hondashi.vercel.app/script.js"
+    data-website-id="79ae684f-f897-43a2-a6c8-eed529d6f80c"></script>
+  <link href="https://unpkg.com/nes.css@2.3.0/css/nes.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/cn-fontsource-xiaolai-mono-sc-regular@1.0.3/font.min.css" rel="stylesheet">
+  <link rel="preload" as="font"
+    href="https://cdn.jsdelivr.net/gh/max32002/naikaifont@1.0/webfont/NaikaiFont-Regular-Lite.woff2" type="font/woff2"
+    crossorigin>
+  <link rel="preload" as="font" href="https://t.oby.tw/static/assets/font/Cubic_11.woff2" type="font/woff2" crossorigin>
+  <link rel="apple-touch-icon" sizes="180x180" href="https://t.oby.tw/static/assets/icon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="https://t.oby.tw/static/assets/icon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="https://t.oby.tw/static/assets/icon/favicon-16x16.png">
+  <link rel="manifest" href="https://t.oby.tw/static/assets/icon/site.webmanifest">
+  <style>
+    /* nes btn override */
+    .nes-btn.flex {
+      display: flex !important;
+    }
 
-      .text-border{
-        text-shadow:
-          -1px -1px 0 #000,  
-          1px -1px 0 #000,
-          -1px 1px 0 #000,
-          1px 1px 0 #000;
-      }
-      
+    /* nes p margin override */
+    .flex p {
+      margin-bottom: unset;
+    }
+
+    /* Xiaolai/Naikai Font Import */
+    @font-face {
+      font-family: 'NaikaiFont';
+      src: url('https://cdn.jsdelivr.net/gh/max32002/naikaifont@1.0/webfont/NaikaiFont-Regular-Lite.woff2') format('woff2');
+      font-weight: normal;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    /* Cubic */
+    @font-face {
+      font-family: 'Cubic';
+      src: url('https://t.oby.tw/static/assets/font/Cubic_11.woff2') format('woff2');
+      font-weight: normal;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    /* Scoped Font Classes instead of global body styles */
+    .pixel-font {
+      font-family: 'Cubic', sans-serif;
+    }
+
+    .handwriting-font {
+      font-family: 'NaikaiFont', 'Xiaolai Mono SC', cursive;
+    }
+
+    .text-border {
+      text-shadow:
+        -1px -1px 0 #000,
+        1px -1px 0 #000,
+        -1px 1px 0 #000,
+        1px 1px 0 #000;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: "Cubic", cursive;
+      background: #1a1a1a no-repeat url("https://t.oby.tw/static/assets/台孩危機-thumbnail.jpg");
+      background-size: contain; 
+      background-position: center;
+      background-attachment: fixed;
+    }
+
+    /* Portrait mode */
+    @media (orientation: portrait) {
       body {
-        margin: 0;
-        padding: 0;
-        font-family: "Cubic", cursive;
-        background: #1a1a1a no-repeat url("https://t.oby.tw/static/assets/week-transition-bg.png");
-        background-position: 50% 20%;
-        background-attachment: scroll;
+        background-image: url("https://t.oby.tw/static/assets/台孩危機-cover.jpg");
       }
-      canvas {
-        display: block;
-        margin: 0 auto;
+    }
+
+    /* Landscape mode */
+    @media (orientation: landscape) {
+      body {
+        background-image: url("https://t.oby.tw/static/assets/台孩危機-thumbnail.jpg");
       }
-      /* Scrollbar styling for NES look */
-      ::-webkit-scrollbar {
-        width: 12px;
-      }
-      ::-webkit-scrollbar-track {
-        background: #212529; 
-      }
-      ::-webkit-scrollbar-thumb {
-        background: #fff; 
-        border: 2px solid #212529;
-      }
-    </style>
-  <link rel="stylesheet" crossorigin href="/TaiKids/assets/index-DJoo4XCM.css">
+    }
+
+    canvas {
+      display: block;
+      margin: 0 auto;
+    }
+
+    /* Scrollbar styling for NES look */
+    ::-webkit-scrollbar {
+      width: 12px;
+    }
+
+    ::-webkit-scrollbar-track {
+      background: #212529;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: #fff;
+      border: 2px solid #212529;
+    }
+  </style>
+  <link rel="stylesheet" crossorigin href="/TaiKids/assets/index-pkgDXksV.css">
 </head>
-  <body>
-    <div class="py-24 sm:py-32">
-        <div class="mx-auto max-w-2xl px-6 lg:max-w-7xl lg:px-8">
-            <div class="mt-10 grid gap-4 sm:mt-16 lg:grid-cols-3 lg:grid-rows-2">
-            <div class="relative lg:row-span-2">
-                <div class="absolute inset-px rounded-lg bg-gray-800/80 lg:rounded-l-4xl"></div>
-                <div class="relative flex h-full flex-col overflow-hidden rounded-[calc(var(--radius-lg)+1px)] lg:rounded-l-[calc(2rem+1px)]">
-                <div class="px-8 pt-8 pb-3 sm:px-10 sm:pt-10 sm:pb-0">
-                    <p class="mx-auto mt-2 max-w-lg text-center text-4xl tracking-tight text-balance text-white sm:text-5xl">《台孩危機》</p>
-                    <p class="mt-2 max-w-lg text-base/6 text-gray-300 text-center">聯經出版・偷筆全新中篇小說連作</p>
-                    <br/>
-                    <a href="https://t.oby.tw/TaiKids/" data-umami-event="LandingGame"><button type="button" class="nes-btn is-success w-full">即刻登入衍生遊戲「台孩兒養成器」</button></a>
-                </div>
-                <div class="@container relative min-h-120 w-full grow max-lg:mx-auto max-lg:max-w-sm">
-                    <div class="absolute inset-x-10 top-10 bottom-0 overflow-hidden rounded-t-[12cqw] border-x-[3cqw] border-t-[3cqw] border-gray-700 bg-gray-900 outline outline-white/20">
-                    <a href="https://t.oby.tw/TaiKids/" data-umami-event="LandingGame"><img src="https://t.oby.tw/static/assets/game-logo.png" alt="" class="size-full object-contain object-center" /></a>
-                    </div>
-                </div>
-                </div>
-                <div class="pointer-events-none absolute inset-px rounded-lg shadow-sm outline outline-white/15 lg:rounded-l-4xl"></div>
+
+<body>
+  <div class="py-24 sm:py-32">
+    <div class="mx-auto max-w-2xl px-6 lg:max-w-7xl lg:px-8">
+      <div class="mt-10 grid gap-4 sm:mt-16 lg:grid-cols-3 lg:grid-rows-2">
+        <div class="relative lg:row-span-2">
+          <div class="absolute inset-px rounded-lg bg-gray-800/80 lg:rounded-l-4xl"></div>
+          <div
+            class="relative flex h-full flex-col overflow-hidden rounded-[calc(var(--radius-lg)+1px)] lg:rounded-l-[calc(2rem+1px)]">
+            <div class="px-8 pt-8 pb-3 sm:px-10 sm:pt-10 sm:pb-0">
+              <p class="mx-auto mt-2 max-w-lg text-center text-4xl tracking-tight text-balance text-white sm:text-5xl">
+                《台孩危機》</p>
+              <p class="mt-2 max-w-lg text-base/6 text-gray-300 text-center">聯經出版・偷筆全新中篇小說連作</p>
+              <br />
+              <p class="mt-2 max-w-lg text-base/6 text-gray-300 text-center">文壇新人偷筆首部輕快詼諧的撫慰之作</p>
+              <br />
+              <p class="mt-2 max-w-lg text-base/6 text-gray-100 text-left">
+                李欣倫｜作家</br>林齊晧｜《udn Global 轉角國際》主編<br />紀大偉｜
+                政大台文所副教授、作家<br />柯貞年｜導演<br />陳方隅｜東吳大學政治系副教授<br />瞿筱葳｜作家<br />──發射推薦（按姓氏筆畫排序）
+              </p>
+              <br/>
+              <p class="mt-2 text-lg font-medium tracking-tight text-white max-lg:text-center">導購連結 📖</p>
+                <p class="mt-2 max-w-lg text-base/6 text-blue-100 text-center">
+                  <a href="https://linkingthink.com/E184797" data-umami-event="BuyBook" data-umami-platform="eslite">誠　品</a><br/>
+                  <a href="https://linkingthink.com/B184797" data-umami-event="BuyBook" data-umami-platform="books.com.tw">博客來</a><br/>
+                  <a href="https://linkingthink.com/L184797" data-umami-event="BuyBook" data-umami-platform="linking">聯　經</a><br/>
+                  <a href="https://linkingthink.com/K184797" data-umami-event="BuyBook" data-umami-platform="kingstone">金石堂</a><br/>
+                  <a href="https://linkingthink.com/RE184797" data-umami-event="BuyBook" data-umami-platform="readmoo">讀　墨</a><br/>
+                </p>
             </div>
-            <div class="relative max-lg:row-start-1">
-                <div class="absolute inset-px rounded-lg bg-gray-800/80 max-lg:rounded-t-4xl"></div>
-                <div class="relative flex h-full flex-col overflow-hidden rounded-[calc(var(--radius-lg)+1px)] max-lg:rounded-t-[calc(2rem+1px)]">
-                <div class="px-8 pt-8 sm:px-10 sm:pt-10 pb-4">
-                    <p class="mt-2 text-lg font-medium tracking-tight text-white max-lg:text-center">2026三月問世・偷筆作品</p>
-                    <p class="mt-2 max-w-lg text-base/6 text-gray-300 max-lg:text-center">島嶼與強權、海洋與板塊深淵裡奮力發出的荒唐囈語，國族與性向夾殺下的生存笑話。</p>
-                </div>
-                <div class="@container flex flex-1 items-center max-lg:py-6 lg:pb-2 max-h-64 overflow-hidden">
-                    <img src="https://t.oby.tw/static/assets/screenshots/boba-01.jpg" alt="" class="w-full object-cover object-center" />
-                </div>
-                </div>
-                <div class="pointer-events-none absolute inset-px rounded-lg shadow-sm outline outline-white/15 max-lg:rounded-t-4xl"></div>
+            <div class="@container relative min-h-120 w-full grow max-lg:mx-auto max-lg:max-w-sm">
+              <div
+                class="absolute inset-x-10 top-10 bottom-0 overflow-hidden rounded-t-[12cqw] border-x-[3cqw] border-t-[3cqw] border-gray-700 bg-gray-900 outline outline-white/20">
+                <img
+                    src="https://t.oby.tw/static/assets/台孩危機-cover.jpg" alt=""
+                    class="size-full object-contain object-center" />
+              </div>
             </div>
-            <div class="relative max-lg:row-start-3 lg:col-start-2 lg:row-start-2">
-                <div class="absolute inset-px rounded-lg bg-gray-800/80"></div>
-                <div class="relative flex h-full flex-col overflow-hidden rounded-[calc(var(--radius-lg)+1px)]">
-                <div class="px-8 pt-8 sm:px-10 sm:pt-10 pb-4">
-                    <p class="mt-2 text-lg font-medium tracking-tight text-white max-lg:text-center">林榮三小說獎得主・九歌年度小說選</p>
-                    <p class="mt-2 max-w-lg text-base/6 text-gray-300 max-lg:text-center">挑戰華語寫作語言疆界，玩轉慣性理解範疇之外的敘事實驗。</p>
-                </div>
-                <div class="flex flex-1 px-8 max-lg:pt-10 max-lg:pb-12 sm:px-10 lg:pb-2 max-h-72 overflow-hidden">
-                    <img src="https://t.oby.tw/static/assets/screenshots/main-01.png" alt="" class="w-full object-cover object-top" />
-                </div>
-                </div>
-                <div class="pointer-events-none absolute inset-px rounded-lg shadow-sm outline outline-white/15"></div>
-            </div>
-            <div class="relative lg:row-span-2">
-                <div class="absolute inset-px rounded-lg bg-gray-800/80 max-lg:rounded-b-4xl lg:rounded-r-4xl"></div>
-                <div class="relative flex h-full flex-col overflow-hidden rounded-[calc(var(--radius-lg)+1px)] max-lg:rounded-b-[calc(2rem+1px)] lg:rounded-r-[calc(2rem+1px)]">
-                <div class="px-8 pt-8 pb-3 sm:px-10 sm:pt-10 sm:pb-0">
-                    <p class="mt-2 text-lg font-medium tracking-tight text-white max-lg:text-center">衍生遊戲「台孩兒養成器」搶先試玩</p>
-                    <p class="mt-2 max-w-lg text-base/6 text-gray-300 max-lg:text-center">透過沉浸式養成互動敘事，帶你回到 2008 年十三歲的兩岸時空。</p>
-                </div>
-                <div class="@container relative min-h-120 w-full grow flex flex-1">
-                    <div class="absolute inset-x-10 top-10 bottom-0 overflow-hidden rounded-t-[12cqw] border-x-[3cqw] border-t-[3cqw] border-gray-700 bg-gray-900 outline outline-white/20">
-                    <a href="https://t.oby.tw/TaiKids/" data-umami-event="LandingGame"><img src="https://t.oby.tw/static/assets/screenshots/saving-01.png" alt="" class="size-full object-cover object-center" /></a>
-                    </div>
-                </div>
-            </div>
-            </div>
-            <div class="relative lg:col-start-1 lg:col-end-4">
-                <div class="absolute inset-px rounded-lg bg-gray-800/80"></div>
-                <div class="relative flex h-full flex-col overflow-hidden rounded-[calc(var(--radius-lg)+1px)]">
-                <div class="px-8 pt-8 pb-3 sm:px-10 sm:pt-10 sm:pb-0">
-                    <p class="mx-auto mt-2 max-w-lg text-center text-4xl tracking-tight text-balance text-white sm:text-5xl">即刻預購<br/>《台孩危機》</p>
-                    <p class="mt-2 max-w-lg text-base/6 text-gray-300 max-lg:text-center"></p>
-                </div>
-                <div class="@container relative min-h-120 w-full grow flex flex-1">
-                    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScuyxuXqUF25DR_kMn4-qgBv61DOHEl3kN0W1N5IgvVO5GTNg/viewform?embedded=true" width="100%" height="541" frameborder="0" marginheight="0" marginwidth="0" data-umami-event="LandingOrder">載入中…</iframe>
-                </div>
-                </div>
-                <div class="pointer-events-none absolute inset-px rounded-lg shadow-sm outline outline-white/15 lg:rounded-l-4xl"></div>
-            </div>
+          </div>
+          <div
+            class="pointer-events-none absolute inset-px rounded-lg shadow-sm outline outline-white/15 lg:rounded-l-4xl">
+          </div>
         </div>
+        <div class="relative max-lg:row-start-1">
+          <div class="absolute inset-px rounded-lg bg-gray-800/80 max-lg:rounded-t-4xl"></div>
+          <div
+            class="relative flex h-full flex-col overflow-hidden rounded-[calc(var(--radius-lg)+1px)] max-lg:rounded-t-[calc(2rem+1px)]">
+            <div class="px-8 pt-8 sm:px-10 sm:pt-10 pb-4">
+              <p class="mt-2 text-lg font-medium tracking-tight text-white max-lg:text-center">2026三月十二・發射上市🚀</p>
+              <br />
+              <p class="mt-2 max-w-lg text-base/6 text-gray-300 max-lg:text-center">
+                他的小說常常像是同時投出了一顆顆大小形狀各異的保齡球，砰砰砰地把讀者心中的瓶瓶罐罐撞個東倒西歪。就像是厲害的歌手能自由控制發聲方式把同一首歌唱出不同層次；厲害的侍酒師能靠不同的酒杯形狀把同一支紅酒呈現出截然不同的風味；天生的荒謬使者偷筆，能以荒謬呈現出各式各樣精細的人類情感，從憤怒到哀愁，從自救到自傷，表演跨度極廣，令人驚嘆。<br /><br />
+                ──寺尾哲也｜作家．專文推薦
+              </p>
+            </div>
+          </div>
+          <div
+            class="pointer-events-none absolute inset-px rounded-lg shadow-sm outline outline-white/15 max-lg:rounded-t-4xl">
+          </div>
         </div>
+        <div class="relative max-lg:row-start-3 lg:col-start-2 lg:row-start-2">
+          <div class="absolute inset-px rounded-lg bg-gray-800/80"></div>
+          <div class="relative flex h-full flex-col overflow-hidden rounded-[calc(var(--radius-lg)+1px)]">
+            <div class="px-8 pt-8 sm:px-10 sm:pt-10 pb-4">
+              <p class="mt-2 text-lg font-medium tracking-tight text-white max-lg:text-center">林榮三小說獎得主・九歌年度小說選</p>
+              <p class="mt-2 max-w-lg text-base/6 text-gray-300 max-lg:text-center">文壇新人偷筆首部輕快詼諧的撫慰之作<br />
+                <br />
+                只有笑話能回擊荒謬。<br />
+                獻給成長迷茫而認同斷訊的你<br />
+                曾在家庭和身分中感到迷失的共感之書。<br />
+              </p>
+            </div>
+            <div class="@container flex flex-1 items-center max-lg:py-6 lg:pb-2 max-h-64 overflow-hidden">
+              <img src="https://t.oby.tw/static/assets/screenshots/boba-01.jpg" alt=""
+                class="w-full object-cover object-center" />
+            </div>
+          </div>
+          <div class="pointer-events-none absolute inset-px rounded-lg shadow-sm outline outline-white/15"></div>
+        </div>
+        <div class="relative lg:row-span-2">
+          <div class="absolute inset-px rounded-lg bg-gray-800/80 max-lg:rounded-b-4xl lg:rounded-r-4xl"></div>
+          <div
+            class="relative flex h-full flex-col overflow-hidden rounded-[calc(var(--radius-lg)+1px)] max-lg:rounded-b-[calc(2rem+1px)] lg:rounded-r-[calc(2rem+1px)]">
+            <div class="px-8 pt-8 pb-3 sm:px-10 sm:pt-10 sm:pb-0">
+              <p class="mt-2 text-lg font-medium tracking-tight text-white max-lg:text-center">衍生遊戲「台孩兒養成器」無料養成</p>
+              <p class="mt-2 max-w-lg text-base/6 text-gray-300 max-lg:text-center">透過沉浸式養成互動敘事，帶你回到 2008 年十三歲的兩岸時空。</p>
+              <br />
+              <a href="https://t.oby.tw/TaiKids/" data-umami-event="LandingGame"><button type="button"
+                  class="nes-btn is-success w-full">免機加酒立刻留學 ✈️「台孩兒養成器」</button></a>
+            </div>
+            <div class="@container relative min-h-120 w-full grow flex flex-1">
+              <div
+                class="absolute inset-x-10 top-10 bottom-0 overflow-hidden rounded-t-[12cqw] border-x-[3cqw] border-t-[3cqw] border-gray-700 bg-gray-900 outline outline-white/20">
+                <a href="https://t.oby.tw/TaiKids/" data-umami-event="LandingGame"><img
+                    src="https://t.oby.tw/static/assets/game-logo.png" alt=""
+                    class="size-full object-contain object-center" /></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="relative lg:col-start-1 lg:col-end-4">
+          <div class="absolute inset-px rounded-lg bg-gray-800/80"></div>
+          <div class="relative flex h-full flex-col overflow-hidden rounded-[calc(var(--radius-lg)+1px)]">
+            <div class="px-8 pt-8 pb-3 sm:px-10 sm:pt-10 sm:pb-0">
+              <p class="mx-auto mt-2 max-w-lg text-center text-4xl tracking-tight text-balance text-white sm:text-5xl">
+                即刻搶讀<br />《台孩危機》</p>
+              <p class="mt-2 max-w-lg text-base/6 text-gray-300 max-lg:text-center"></p>
+            </div>
+            <div class="@container relative min-h-120 w-full h-full grow flex">
+              <div class="px-8 pt-8 pb-3 sm:px-10 sm:pt-10 sm:pb-0 ml-3">
+
+              </div>
+              <div class="px-8 pt-8 pb-3 sm:px-10 sm:pt-10 sm:pb-0 ml-3">
+                <p class="mt-2 max-w-lg text-base/6 text-gray-300 text-center">
+                  長年駐守蘇州的台商父親在名利場追逐光影，與隔海堅守在地信念的台派媽媽，讓瑞翔與瑞庭兩兄弟的成長，始終顯示為「訊號搜尋中」的認同焦慮。這場在雙語學校上演的青春荒謬劇，從「搶救老師大作戰」到無意間窺視父親的「桃色活動」，讓往返兩地的兄弟，雙雙長成帶刺且豔放的奇形花朵。<br />
+                  <br />
+                  弟弟瑞庭在回台後墜入成癮濃霧，試圖振翅逃離不堪往事。而哥哥瑞翔因父喪多年後重回蘇州，竟與一名「絲襪奴」展開離奇糾纏。這場走精意外反成為他回望家庭裂縫的黑色契機。至於被低估的母親美蓮，則試圖以職場習得的「專案管理」大法，冷靜修補生活並盤點人生。<br />
+                  <br />
+                  全書寫活了跨境世代的成長傷痛，將破碎的家庭關係寫成一部欲哭卻笑嘆的撫慰之作。偷筆誠實地記錄了人們如何被時代塑造，又如何在失敗與混亂的裂縫中，重新定位彼此。<br>
+                </p>
+              </div>
+              <div class="px-8 pt-8 pb-3 sm:px-10 sm:pt-10 sm:pb-0">
+                <p class="mt-2 text-lg font-medium tracking-tight text-white max-lg:text-center">導購連結 📖</p>
+                <p class="mt-2 max-w-lg text-base/6 text-blue-100 text-center">
+                  <a href="https://linkingthink.com/E184797" data-umami-event="BuyBook" data-umami-platform="eslite">誠　品</a><br/>
+                  <a href="https://linkingthink.com/B184797" data-umami-event="BuyBook" data-umami-platform="books.com.tw">博客來</a><br/>
+                  <a href="https://linkingthink.com/L184797" data-umami-event="BuyBook" data-umami-platform="linking">聯　經</a><br/>
+                  <a href="https://linkingthink.com/K184797" data-umami-event="BuyBook" data-umami-platform="kingstone">金石堂</a><br/>
+                  <a href="https://linkingthink.com/RE184797" data-umami-event="BuyBook" data-umami-platform="readmoo">讀　墨</a><br/>
+                </p>
+              </div>
+            </div>
+          </div>
+          <div
+            class="pointer-events-none absolute inset-px rounded-lg shadow-sm outline outline-white/15 lg:rounded-l-4xl">
+          </div>
+        </div>
+      </div>
+    </div>
 </body>
+
 </html>
